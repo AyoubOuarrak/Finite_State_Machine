@@ -32,15 +32,13 @@ public:
   void check(std::string str);
   void halt();
 
-  typedef typename std::map<std::string, int> map;
-
 private:
-  // The key is a string, int this case the key rappresent
+  // The key is a string, in this case the key rappresent
   // the symbol or the single state, the integer rappresent
   // a number that we use later to access the transistions table
-  map _Q;      
-  map _sigma;	 
-  map _F;      
+  std::map<std::string, int> _Q;      
+  std::map<std::string, int> _sigma;	 
+  std::map<std::string, int> _F;      
 
   bool _transitionsDefined;
   bool _configurationSaved;
